@@ -6,11 +6,8 @@ import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 
 public class AlertStepPage {
 
@@ -36,13 +33,9 @@ public class AlertStepPage {
     public void the_user_accept_the_alert() throws InterruptedException {
 
         Thread.sleep(5000);
-
         Alert alert = driver.switchTo().alert();
-
         System.out.println("alert.getText() = " + alert.getText());
-
         alert.accept();
-
         BrowserUtils.waitFor(3);
 
     }

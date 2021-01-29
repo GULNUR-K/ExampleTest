@@ -44,12 +44,8 @@ public class RegisterStepDef {
         Driver.get().findElement(By.xpath("//div/div[@aria-label='Choose Wednesday, March 17th, 1982']")).click();
 
         new PracticeFormPage().subjectsInput.sendKeys(table.get("Subjects"));
-
         new PracticeFormPage().currentAddress.sendKeys(table.get("Current Address"));
-
-
     }
-
     @Then("the student should be able to select gender {string} and hobbies {string}")
     public void the_student_should_be_able_to_select_gender_and_hobbies(String string, String string2) {
 
@@ -60,16 +56,12 @@ public class RegisterStepDef {
         }else
             new PracticeFormPage().genderRadio3.click();
 
-            //BrowserUtils.waitFor(3);
-
         if(string2.equals("Sports")) {
             new PracticeFormPage().hobbiesCheckbox1.click();
         }else  if(string2.equals("Reading")) {
             new PracticeFormPage().hobbiesCheckbox2.click();
         }else
             new PracticeFormPage().hobbiesCheckbox3.click();
-
-           // BrowserUtils.waitFor(3);
     }
 
     @Then("The student should able to upload a picture")
@@ -85,12 +77,10 @@ public class RegisterStepDef {
 
     }
 
-    @Then("select state {string} and city {string}")
+    @Then("select state and city")
     public void select_state_and_city(String string, String string2) {
 
         new PracticeFormPage().state.click();
-
-
 
     }
 
@@ -103,11 +93,9 @@ public class RegisterStepDef {
     @Then("message Thanks for submitting the form should be displayed on new popup")
     public void message_Thanks_for_submitting_the_form_should_be_displayed_on_new_popup() {
 
-
         Assert.assertTrue(new PracticeFormPage().allert.getText().equals("Thanks for submitting the form"));
 
         new PracticeFormPage().closeLargeModal.click();
-
 
     }
     @Then("The student should be able to submit after cleaning one mandatory info")
