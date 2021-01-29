@@ -1,5 +1,4 @@
 
-@navigate
 Feature: Student should be able to enter all details into student registration
   form and submit
 #  All mandatory details must be entered
@@ -16,14 +15,16 @@ Feature: Student should be able to enter all details into student registration
       | Date of Birth   | 12 Feb 1986              |
       | Subjects        | History                  |
       | Current Address | 18 October Road          |
-    Then the student should be able to select gender "female" and hobbies "music"
+    Then the student should be able to select gender "Male" and hobbies "Reading"
     Then The student should able to upload a picture
     Then select state "NCR" and city "Delhi"
-    And  The student should be able to submit
+
 
   Scenario: Validation for correct entering(Positive)
+    And  The student should be able to submit
     Then message Thanks for submitting the form should be displayed on new popup
 
   Scenario: Validation for correct entering(Negative)
+    And  The student should be able to submit after cleaning one mandatory info
     Then Message will not be displayed if mandatory fields have not been entered correctly
 
