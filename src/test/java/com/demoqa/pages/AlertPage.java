@@ -5,12 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AlertPage  {
+public class AlertPage extends BasePage{
 
     public AlertPage(){
         PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(xpath="//div/button[@id='timerAlertButton']")
+    @FindBy(id="timerAlertButton")
     public WebElement timerAlertButton;
 }

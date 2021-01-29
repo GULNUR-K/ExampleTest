@@ -3,11 +3,11 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-01-29T19:32:04.184Z",
+        "start_timestamp": "2021-01-29T20:11:26.048Z",
         "before": [
           {
             "result": {
-              "duration": 3171145000,
+              "duration": 2531354000,
               "status": "passed"
             },
             "match": {
@@ -22,8 +22,8 @@
         "after": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : This alert appeared after 5 seconds}\n  (Session info: chrome\u003d88.0.4324.96): This alert appeared after 5 seconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Macbooks-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:468:8b77:5551:8875%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.7\u0027, java.version: \u002712.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/rv/bcv8j7l94yq...}, goog:chromeOptions: {debuggerAddress: localhost:62140}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 95389570cc5a7353c3f62c0e33768975\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\n\tat com.demoqa.step_definitions.Hooks.tearDown(Hooks.java:26)\n",
-              "duration": 33335000,
+              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : This alert appeared after 5 seconds}\n  (Session info: chrome\u003d88.0.4324.96): This alert appeared after 5 seconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Macbooks-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:468:8b77:5551:8875%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.7\u0027, java.version: \u002712.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/rv/bcv8j7l94yq...}, goog:chromeOptions: {debuggerAddress: localhost:62807}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 92e36cdae73aa9a6474207733c359e01\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\n\tat com.demoqa.step_definitions.Hooks.tearDown(Hooks.java:26)\n",
+              "duration": 29907000,
               "status": "failed"
             },
             "match": {
@@ -36,7 +36,7 @@
         "steps": [
           {
             "result": {
-              "duration": 780573000,
+              "duration": 862815000,
               "status": "passed"
             },
             "line": 8,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 76956000,
+              "duration": 91495000,
               "status": "passed"
             },
             "line": 9,
@@ -60,29 +60,11 @@
           },
           {
             "result": {
-              "duration": 10003066000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "alert is displayed after 5 second",
-            "match": {
-              "arguments": [
-                {
-                  "val": "5",
-                  "offset": 25
-                }
-              ],
-              "location": "com.demoqa.step_definitions.AlertStepPage.alert_is_displayed_after_second(java.lang.Integer)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.NullPointerException\n\tat com.demoqa.step_definitions.AlertStepPage.the_user_accept_the_alert(AlertStepPage.java:51)\n\tat ✽.the user accept the alert(file:///Users/macbookpro/idealProjects/AdvancedTechTest/src/test/resources/features/Alerts.feature:11)\n",
-              "duration": 2558000,
+              "error_message": "java.lang.NullPointerException\n\tat com.demoqa.step_definitions.AlertStepPage.the_user_accept_the_alert(AlertStepPage.java:40)\n\tat ✽.the user accept the alert(file:///Users/macbookpro/idealProjects/AdvancedTechTest/src/test/resources/features/Alerts.feature:10)\n",
+              "duration": 5005594000,
               "status": "failed"
             },
-            "line": 11,
+            "line": 10,
             "name": "the user accept the alert",
             "match": {
               "location": "com.demoqa.step_definitions.AlertStepPage.the_user_accept_the_alert()"

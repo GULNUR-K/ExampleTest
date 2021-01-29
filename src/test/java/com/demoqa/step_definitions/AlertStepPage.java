@@ -6,17 +6,19 @@ import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class AlertStepPage {
 
     WebDriver driver;
 
     @Given("the user is on the alert page")
-    public void the_user_is_on_the_alert_page() {
+    public void the_user_is_on_the_alert_page() throws InterruptedException {
+
         String url2 = ConfigurationReader.get("url2");
 
         Driver.get().get(url2);
@@ -30,21 +32,19 @@ public class AlertStepPage {
 
         new AlertPage().timerAlertButton.click();
     }
-
     @Then("the user accept the alert")
-    public void the_user_accept_the_alert() {
+    public void the_user_accept_the_alert() throws InterruptedException {
 
-        BrowserUtils.waitFor(5);
+        Thread.sleep(5000);
 
         Alert alert = driver.switchTo().alert();
 
-        BrowserUtils.waitFor(3);
-
-        System.out.println("alert.getText() = " +alert.getText());
+        System.out.println("alert.getText() = " + alert.getText());
 
         alert.accept();
 
         BrowserUtils.waitFor(3);
+
     }
 
 }
