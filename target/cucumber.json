@@ -1,0 +1,414 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 893039000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the student is on the practice form page",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_is_on_the_practice_form_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\n\tat com.demoqa.step_definitions.RegisterStepDef.the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(RegisterStepDef.java:39)\n\tat ✽.the student should be able to enter all details into inboxes using following information(file:///Users/macbookpro/idealProjects/AdvancedTechTest/src/test/resources/features/StudentRegister.feature:11)\n",
+              "duration": 9150000,
+              "status": "pending"
+            },
+            "line": 11,
+            "name": "the student should be able to enter all details into inboxes using following information",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "First Name",
+                  "Student"
+                ]
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "Example"
+                ]
+              },
+              {
+                "cells": [
+                  "Email",
+                  "studentExample@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "Mobile",
+                  "08976453421"
+                ]
+              },
+              {
+                "cells": [
+                  "Date of Birth",
+                  "12 Feb 1986"
+                ]
+              },
+              {
+                "cells": [
+                  "Subjects",
+                  "History"
+                ]
+              },
+              {
+                "cells": [
+                  "Current Address",
+                  "18 October Road"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3195000,
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "the student should be able to select gender \"female\" and hobbies \"music\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"female\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"music\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_should_be_able_to_select_gender_and_hobbies(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 835000,
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "The student should able to upload a picture",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_should_able_to_upload_a_picture()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 789000,
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "select state \"NCR\" and city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NCR\"",
+                  "offset": 13
+                },
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.demoqa.step_definitions.RegisterStepDef.select_state_and_city(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 486000,
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "The student should be able to submit",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_should_be_able_to_submit()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-29T00:23:49.785Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2634403000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.demoqa.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Validation for correct entering(Positive)",
+        "description": "",
+        "id": "student-should-be-able-to-enter-all-details-into-student-registration;validation-for-correct-entering(positive)",
+        "after": [
+          {
+            "result": {
+              "duration": 154289000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.demoqa.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1120000,
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "message Thanks for submitting the form should be displayed on new popup",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.message_Thanks_for_submitting_the_form_should_be_displayed_on_new_popup()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@navigate"
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 940857000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the student is on the practice form page",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_is_on_the_practice_form_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\n\tat com.demoqa.step_definitions.RegisterStepDef.the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(RegisterStepDef.java:39)\n\tat ✽.the student should be able to enter all details into inboxes using following information(file:///Users/macbookpro/idealProjects/AdvancedTechTest/src/test/resources/features/StudentRegister.feature:11)\n",
+              "duration": 2068000,
+              "status": "pending"
+            },
+            "line": 11,
+            "name": "the student should be able to enter all details into inboxes using following information",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "First Name",
+                  "Student"
+                ]
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "Example"
+                ]
+              },
+              {
+                "cells": [
+                  "Email",
+                  "studentExample@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "Mobile",
+                  "08976453421"
+                ]
+              },
+              {
+                "cells": [
+                  "Date of Birth",
+                  "12 Feb 1986"
+                ]
+              },
+              {
+                "cells": [
+                  "Subjects",
+                  "History"
+                ]
+              },
+              {
+                "cells": [
+                  "Current Address",
+                  "18 October Road"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 327000,
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "the student should be able to select gender \"female\" and hobbies \"music\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"female\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"music\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_should_be_able_to_select_gender_and_hobbies(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 299000,
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "The student should able to upload a picture",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_should_able_to_upload_a_picture()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 355000,
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "select state \"NCR\" and city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NCR\"",
+                  "offset": 13
+                },
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.demoqa.step_definitions.RegisterStepDef.select_state_and_city(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 401000,
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "The student should be able to submit",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.the_student_should_be_able_to_submit()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-29T00:23:53.612Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1548568000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.demoqa.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Validation for correct entering(Negative)",
+        "description": "",
+        "id": "student-should-be-able-to-enter-all-details-into-student-registration;validation-for-correct-entering(negative)",
+        "after": [
+          {
+            "result": {
+              "duration": 157741000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.demoqa.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1068000,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "Message will not be displayed if mandatory fields have not been entered correctly",
+            "match": {
+              "location": "com.demoqa.step_definitions.RegisterStepDef.message_will_not_be_displayed_if_mandatory_fields_have_not_been_entered_correctly()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@navigate"
+          }
+        ]
+      }
+    ],
+    "name": "Student should be able to enter all details into student registration",
+    "description": "  form and submit",
+    "id": "student-should-be-able-to-enter-all-details-into-student-registration",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/StudentRegister.feature",
+    "tags": [
+      {
+        "name": "@navigate",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
