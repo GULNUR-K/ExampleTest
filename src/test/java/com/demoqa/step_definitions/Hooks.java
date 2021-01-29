@@ -21,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 
         @After
         public void tearDown(Scenario scenario){
+            System.out.println("\tthis is coming from AFTER");
             if(scenario.isFailed()){
                 final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
                 scenario.attach(screenshot,"image/png","screenshot");

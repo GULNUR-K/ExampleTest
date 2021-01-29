@@ -7,5 +7,4 @@ Feature: User should be able to click second button and accept the alert
   Scenario: the user should have accept alert
     Given the user is on the alert page
     And   the user should be able to click second button
-    Then  alert is displayed after five second
     Then  the user accept the alert

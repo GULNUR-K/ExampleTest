@@ -7,8 +7,9 @@ import com.demoqa.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class AlertStepPage {
 
@@ -24,37 +25,26 @@ public class AlertStepPage {
 
         Assert.assertTrue(actualTitle.contains("alerts"));
     }
-
     @Given("the user should be able to click second button")
     public void the_user_should_be_able_to_click_second_button() {
 
         new AlertPage().timerAlertButton.click();
-
-        BrowserUtils.waitFor(5);
-    }
-    @Then("alert is displayed after five second")
-    public void alert_is_displayed_after_second()  {
-
-        BrowserUtils.waitFor(5);
-        Alert alert = driver.switchTo().alert();
-
-        Assert.assertEquals("This alert appeared after 5 seconds", alert.getText());
-
-        alert.accept();
     }
 
     @Then("the user accept the alert")
     public void the_user_accept_the_alert() {
 
-//        BrowserUtils.waitFor(3);
-//        Alert alert = driver.switchTo().alert();
-//
-//        BrowserUtils.waitFor(3);
-//
-//        System.out.println("alert.getText() = " +alert.getText());
-//        alert.accept();
-//
-//        BrowserUtils.waitFor(3);
+        BrowserUtils.waitFor(5);
+
+        Alert alert = driver.switchTo().alert();
+
+        BrowserUtils.waitFor(3);
+
+        System.out.println("alert.getText() = " +alert.getText());
+
+        alert.accept();
+
+        BrowserUtils.waitFor(3);
     }
 
 }
