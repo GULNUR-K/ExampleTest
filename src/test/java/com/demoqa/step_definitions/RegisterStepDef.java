@@ -12,6 +12,8 @@ import org.junit.Ignore;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Map;
+
 public class RegisterStepDef {
 
 
@@ -28,7 +30,7 @@ public class RegisterStepDef {
     }
 
     @Given("the student should be able to enter all details into inboxes using following information")
-    public void the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(io.cucumber.datatable.DataTable dataTable) {
+    public void the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(Map<String, String> table) {
 
     }
 
