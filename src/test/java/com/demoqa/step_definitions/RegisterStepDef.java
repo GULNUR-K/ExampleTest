@@ -27,9 +27,7 @@ public class RegisterStepDef {
 
         Driver.get().get(url1);
 
-        String actualTitle = Driver.get().getTitle();
-
-        Assert.assertEquals("ToolsQA",actualTitle);
+        Assert.assertTrue(driver.findElement(By.xpath("//div[text()='Practice Form']")).getText().equals("Practice Form"));
     }
 
     @Given("the student should be able to enter all details into inboxes using following information")
