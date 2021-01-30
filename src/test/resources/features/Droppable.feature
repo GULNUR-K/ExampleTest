@@ -1,5 +1,5 @@
-#DONE
 
+@wip
 Feature: Drag and drop element into specific area
 
 #Must drag and drop the 'Drag me' element into the specified area

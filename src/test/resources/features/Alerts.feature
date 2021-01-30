@@ -1,6 +1,5 @@
-#DONE
 
-
+@wip
 Feature: User should be able to click second button and accept the alert
 
 # Must click on 'On button click, alert will appear after 5 seconds'

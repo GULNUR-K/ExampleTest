@@ -1,6 +1,5 @@
-#DONE- except color
-
-
+#DONE
+@wip
 Feature: Student should be able to enter all details into student registration form and submit
 #  All mandatory details must be entered
 #  A picture must be uploaded
@@ -25,6 +24,6 @@ Feature: Student should be able to enter all details into student registration f
     Then message Thanks for submitting the form should be displayed on new popup
 
   Scenario: Validation for correct entering(Negative)
-    And  The student should be able to submit after cleaning one mandatory info
-    Then Message will not be displayed if mandatory fields have not been entered correctly
+    And  The student should be able to clear one mandatory info
+    Then The student should be able to see red color for missing info
 

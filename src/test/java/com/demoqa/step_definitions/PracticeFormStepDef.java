@@ -81,9 +81,9 @@ public class PracticeFormStepDef {
         String locator1 = "//div[starts-with(@id,'react-select-3-option-')][text()='" + stateName + "']";
         BrowserUtils.scrollToElement(new PracticeFormPage().state);
         new PracticeFormPage().state.click();
-        System.out.println(new PracticeFormPage().stateMenu.getAttribute("outerHTML"));
+        //System.out.println(new PracticeFormPage().stateMenu.getAttribute("outerHTML"));
         element1 = Driver.get().findElement(By.xpath(locator1));
-        System.out.println(element1.getText());
+        //System.out.println(element1.getText());
         BrowserUtils.waitFor(2);
         element1.click();
 
@@ -91,34 +91,40 @@ public class PracticeFormStepDef {
         String locator2 = "//div[starts-with(@id,'react-select-4-option-')][text()='" + cityName + "']";
         BrowserUtils.scrollToElement(new PracticeFormPage().city);
         new PracticeFormPage().city.click();
-        System.out.println(new PracticeFormPage().stateMenu.getAttribute("outerHTML"));
+        //System.out.println(new PracticeFormPage().stateMenu.getAttribute("outerHTML"));
         element2 = Driver.get().findElement(By.xpath(locator2));
-        System.out.println(element2.getText());
+        //System.out.println(element2.getText());
         BrowserUtils.waitFor(2);
         element2.click();
     }
+
     @Then("The student should be able to submit")
     public void the_student_should_be_able_to_submit() {
         new PracticeFormPage().submit.click();
+        System.out.println(new PracticeFormPage().lastName.getCssValue("border-color"));
         BrowserUtils.waitFor(3);
     }
+
     @Then("message Thanks for submitting the form should be displayed on new popup")
     public void message_Thanks_for_submitting_the_form_should_be_displayed_on_new_popup() {
 
         Assert.assertEquals("Thanks for submitting the form", new PracticeFormPage().alert.getText());
         new PracticeFormPage().closeLargeModal.click();
     }
-    @Then("The student should be able to submit after cleaning one mandatory info")
-    public void the_student_should_be_able_to_submit_after_cleaning_one_mandatory_info() {
+    @Then("The student should be able to clear one mandatory info")
+    public void the_student_should_be_able_to_clear_one_mandatory_info() {
 
         BrowserUtils.waitFor(3);
-        new PracticeFormPage().userEmail.clear();
-        new PracticeFormPage().submit.click();
-        BrowserUtils.waitFor(3);
+        new PracticeFormPage().lastName.clear();
     }
-    @Then("Message will not be displayed if mandatory fields have not been entered correctly")
-    public void message_will_not_be_displayed_if_mandatory_fields_have_not_been_entered_correctly() {
+    @Then("The student should be able to see red color for missing info")
+    public void The_student_should_be_able_to_see_red_color_for_missing_info() {
 
-        Assert.assertFalse(new PracticeFormPage().alert.isEnabled());
+        new PracticeFormPage().submit.submit();
+        BrowserUtils.waitFor(3);
+
+        //rgb(202, 211, 214) it is background color if info is entered true
+        Assert.assertNotEquals("rgb(202, 211, 214)", new PracticeFormPage().lastName.getCssValue("border-color"));
+
     }
 }

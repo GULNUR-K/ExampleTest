@@ -62,7 +62,7 @@ public class PracticeFormPage extends BasePage {
     @FindBy(xpath = "(//div[@class=' css-1wy0on6'])[2]")
     public WebElement city;
 
-    @FindBy(id="submit")
+    @FindBy(xpath="//div/button[text()='Submit']")
     public WebElement submit;
 
     @FindBy(xpath = "//div[@class='modal-title h4']")

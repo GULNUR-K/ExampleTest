@@ -1,6 +1,5 @@
-#DONE
 
-
+@wip
 Feature: Close the small modal
 
 #Must select 'Small modal' button

@@ -11,10 +11,6 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class DatePickerStepDef {
 
@@ -25,7 +21,6 @@ public class DatePickerStepDef {
         String actualTitle = Driver.get().getCurrentUrl();
         Assert.assertTrue(actualTitle.contains("date-picker"));
     }
-
     @Then("the user should be able to select a date using date picker from Select Date field")
     public void the_user_should_be_able_to_select_a_date_using_date_picker_from_Select_Date_field() {
 
@@ -47,18 +42,14 @@ public class DatePickerStepDef {
 
         try {
             WebElement dropdownDay=Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='"+day+"'])[1]"));
-
             dropdownDay.click();
         }
         catch(org.openqa.selenium.StaleElementReferenceException ex)
         {
             WebElement dropdownDay=Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='"+day+"'])[1]"));
-
             dropdownDay.click();
         }
-
-        BrowserUtils.waitFor(4);
-
+        BrowserUtils.waitFor(2);
     }
     @Ignore
     @And("the user should be able to select a month from today's date")
@@ -81,11 +72,9 @@ public class DatePickerStepDef {
         }else if(month>1) {
             month = month - 2;
         }
-
         new DatePickerPage().datePickerMonthYearInput.click();
 
-        BrowserUtils.waitFor(2);
-
+        BrowserUtils.waitFor(1);
         WebElement dropdownMonth = Driver.get().findElement(By.xpath("//select/option[@value='"+month+"']"));
         WebElement dropdownYear = Driver.get().findElement(By.xpath("//select/option[text()='"+year+"']"));
 
@@ -93,7 +82,6 @@ public class DatePickerStepDef {
         dropdownYear.click();
         BrowserUtils.waitFor(1);
         if(day>=25) {
-
             try {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
                 dropdownDay.click();
@@ -110,8 +98,8 @@ public class DatePickerStepDef {
                 dropdownDay.click();
             }
         BrowserUtils.waitFor(4);
-
         String date3 = new DatePickerPage().datePickerMonthYearInput.getAttribute("value");
         System.out.println("date3 = " + date3);
+        //you can see dates on console
     }
 }
