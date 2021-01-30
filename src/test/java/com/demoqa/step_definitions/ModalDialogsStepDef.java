@@ -10,7 +10,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 
-public class ModalDialogsDef {
+public class ModalDialogsStepDef {
 
     @Given("the user is on the Modal Dialogs page")
     public void the_user_is_on_the_Modal_Dialogs_page() {

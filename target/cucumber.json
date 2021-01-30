@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-01-30T02:08:56.781Z",
+        "start_timestamp": "2021-01-30T03:13:37.936Z",
         "before": [
           {
             "result": {
-              "duration": 2539023000,
+              "duration": 2606701000,
               "status": "passed"
             },
             "match": {
@@ -16,13 +16,13 @@
           }
         ],
         "line": 7,
-        "name": "User can move on button",
+        "name": "User can Drag and drop element",
         "description": "",
-        "id": "close-the-small-modal;user-can-move-on-button",
+        "id": "use-the-date-picker-to-set-the-date-to-1-month-in-the-future;user-can-drag-and-drop-element",
         "after": [
           {
             "result": {
-              "duration": 112017000,
+              "duration": 111218000,
               "status": "passed"
             },
             "match": {
@@ -35,39 +35,39 @@
         "steps": [
           {
             "result": {
-              "duration": 790999000,
+              "duration": 6482725000,
               "status": "passed"
             },
             "line": 8,
-            "name": "the user is on the Modal Dialogs page",
+            "name": "the user is on the Date Picker page",
             "match": {
-              "location": "com.demoqa.step_definitions.ModalDialogsDef.the_user_is_on_the_Modal_Dialogs_page()"
+              "location": "com.demoqa.step_definitions.DatePickerStepDef.the_user_is_on_the_Date_Picker_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2111419000,
+              "duration": 6483893000,
               "status": "passed"
             },
             "line": 9,
-            "name": "the user should be able to select Small modal button",
+            "name": "the user should be able to select a date using date picker from Select Date field",
             "match": {
-              "location": "com.demoqa.step_definitions.ModalDialogsDef.the_user_should_be_able_to_select_Small_modal_button()"
+              "location": "com.demoqa.step_definitions.DatePickerStepDef.the_user_should_be_able_to_select_a_date_using_date_picker_from_Select_Date_field()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 4126139000,
+              "duration": 2291376000,
               "status": "passed"
             },
             "line": 10,
-            "name": "the user should be able to close the modal",
+            "name": "the user should be able to select a month from today\u0027s date",
             "match": {
-              "location": "com.demoqa.step_definitions.ModalDialogsDef.the_user_should_be_able_to_close_the_modal()"
+              "location": "com.demoqa.step_definitions.DatePickerStepDef.the_user_should_be_able_to_select_a_month_from_today_s_date()"
             },
-            "keyword": "Then "
+            "keyword": "And "
           }
         ],
         "tags": [
@@ -77,11 +77,11 @@
         ]
       }
     ],
-    "name": "Close the small modal",
+    "name": "Use the date picker to set the date to 1 month in the future",
     "description": "",
-    "id": "close-the-small-modal",
+    "id": "use-the-date-picker-to-set-the-date-to-1-month-in-the-future",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/ModalDialogs.feature",
+    "uri": "file:src/test/resources/features/DatePicker.feature",
     "tags": [
       {
         "name": "@wip",
