@@ -25,8 +25,8 @@ public class ToolTipsStepDef {
     @And("the user should be able to hover over the Hover me to see button")
     public void the_user_should_be_able_to_hover_over_the_button() {
 
-        Actions actions = new Actions(Driver.get());
-        actions.moveToElement(new ToolTipsPage().toolTipButton).perform();
+        WebElement button=new ToolTipsPage().toolTipButton;
+        BrowserUtils.hover(button);
 
         BrowserUtils.waitFor(2);
         WebElement element=Driver.get().findElement(By.xpath("//div/div[.='You hovered over the Button']"));
@@ -35,8 +35,8 @@ public class ToolTipsStepDef {
     @Then("the user should be able to hover over the Hover me to see field")
     public void the_user_should_be_able_to_hover_over_the_field() {
 
-        Actions actions = new Actions(Driver.get());
-        actions.moveToElement(new ToolTipsPage().toolTipTextField).perform();
+        WebElement button=new ToolTipsPage().toolTipTextField;
+        BrowserUtils.hover(button);
 
         BrowserUtils.waitFor(2);
         WebElement element=Driver.get().findElement(By.xpath("//div/div[.='You hovered over the text field']"));
