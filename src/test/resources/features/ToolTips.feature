@@ -1,10 +1,11 @@
+#DONE
 
-Feature: Student should be able to enter all details into student registration
-  form and submit
-#  All mandatory details must be entered
-#  A picture must be uploaded
-#  On success a popup will be displayed detailing all information entered
-#  Validation will be displayed on any mandatory fields that have not been entered correctly
-  Background:
-    Given the student is on the practice form page
-    And the student should be able to enter all details into inboxes using following information
+Feature: Hover over the button and the input field
+
+#  Must hover over the 'Hover me to see' button
+#  Must hover over the 'Hover me to see' field
+
+  Scenario: User can move on button
+    Given the user is on the Tool Tips page
+    And   the user should be able to hover over the Hover me to see button
+    Then  the user should be able to hover over the Hover me to see field

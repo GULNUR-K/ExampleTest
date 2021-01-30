@@ -1,6 +1,7 @@
+#DONE- except color
 
-Feature: Student should be able to enter all details into student registration
-  form and submit
+
+Feature: Student should be able to enter all details into student registration form and submit
 #  All mandatory details must be entered
 #  A picture must be uploaded
 #  On success a popup will be displayed detailing all information entered
@@ -18,7 +19,6 @@ Feature: Student should be able to enter all details into student registration
     Then the student should be able to select gender "Male" and hobbies "Reading"
     Then The student should able to upload a picture
     Then select state "NCR" and city "Delhi"
-
 
   Scenario: Validation for correct entering(Positive)
     And  The student should be able to submit

@@ -1,6 +1,7 @@
 package com.demoqa.pages;
 
 import com.demoqa.utilities.BrowserUtils;
+import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public abstract class  BasePage {
 
@@ -113,5 +115,7 @@ public abstract class  BasePage {
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
+
 
 }

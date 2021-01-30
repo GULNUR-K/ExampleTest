@@ -9,19 +9,14 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 
-public class AlertStepPage {
-
-    WebDriver driver;
+public class AlertStepDef {
 
     @Given("the user is on the alert page")
     public void the_user_is_on_the_alert_page() throws InterruptedException {
 
         String url2 = ConfigurationReader.get("url2");
-
         Driver.get().get(url2);
-
         String actualTitle = Driver.get().getCurrentUrl();
-
         Assert.assertTrue(actualTitle.contains("alerts"));
     }
     @Given("the user should be able to click second button")
@@ -30,14 +25,12 @@ public class AlertStepPage {
         new AlertPage().timerAlertButton.click();
     }
     @Then("the user accept the alert")
-    public void the_user_accept_the_alert() throws InterruptedException {
+    public void the_user_accept_the_alert() {
 
-        Thread.sleep(5000);
-        Alert alert = driver.switchTo().alert();
-        System.out.println("alert.getText() = " + alert.getText());
+        BrowserUtils.waitFor(5);
+        Alert alert = Driver.get().switchTo().alert();
+        Assert.assertEquals("This alert appeared after 5 seconds", alert.getText());
         alert.accept();
         BrowserUtils.waitFor(3);
-
     }
-
 }

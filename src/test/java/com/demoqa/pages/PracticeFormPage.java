@@ -10,6 +10,7 @@ public class PracticeFormPage extends BasePage {
     public PracticeFormPage(){
         PageFactory.initElements(Driver.get(), this);
     }
+
     @FindBy(id="firstName")
     public WebElement firstName;
 
@@ -52,23 +53,22 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id="uploadPicture")
     public  WebElement uploadPicture;
 
-    @FindBy(xpath=" (//div[@class=' css-1hwfws3'])[1]")
-    public  WebElement state;
+    @FindBy(xpath="(//div[@class=' css-1hwfws3'])[1]")
+    public WebElement state;
+
+    @FindBy(css = ".css-26l3qy-menu")
+    public WebElement stateMenu;
+
+    @FindBy(xpath = "(//div[@class=' css-1wy0on6'])[2]")
+    public WebElement city;
 
     @FindBy(id="submit")
     public WebElement submit;
 
     @FindBy(xpath = "//div[@class='modal-title h4']")
-    public WebElement allert;
+    public WebElement alert;
 
     @FindBy(id="closeLargeModal")
     public WebElement closeLargeModal;
 
-
-    public void login(String userNameStr, String passwordStr) {
-        //this.userName.sendKeys(userNameStr);
-        //this.password.sendKeys(passwordStr);
-        //this.submit.click();
-        // verification that we logged
-    }
 }

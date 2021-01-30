@@ -6,18 +6,15 @@ import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.junit.Ignore;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
-import java.util.List;
 import java.util.Map;
 
-public class RegisterStepDef {
+public class PracticeFormStepDef {
     WebDriver driver;
 
     @Given("the student is on the practice form page")
@@ -27,8 +24,10 @@ public class RegisterStepDef {
 
         Driver.get().get(url1);
 
-        Assert.assertTrue(driver.findElement(By.xpath("//div[text()='Practice Form']")).getText().equals("Practice Form"));
-    }
+        String actualTitle = Driver.get().getCurrentUrl();
+
+        Assert.assertTrue(actualTitle.contains("practice-form"));
+  }
 
     @Given("the student should be able to enter all details into inboxes using following information")
     public void the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(Map<String, String> table) {
@@ -74,45 +73,52 @@ public class RegisterStepDef {
         String fullPath = projectPath + "/" + filePath;
 
         new PracticeFormPage().uploadPicture.sendKeys(fullPath);
-
+        BrowserUtils.waitFor(2);
     }
-
-    @Then("select state and city")
-    public void select_state_and_city(String string, String string2) {
-
+    @Then("select state {string} and city {string}")
+    public void select_state_and_city(String stateName, String cityName) {
+        WebElement element1;
+        String locator1 = "//div[starts-with(@id,'react-select-3-option-')][text()='" + stateName + "']";
+        BrowserUtils.scrollToElement(new PracticeFormPage().state);
         new PracticeFormPage().state.click();
+        System.out.println(new PracticeFormPage().stateMenu.getAttribute("outerHTML"));
+        element1 = Driver.get().findElement(By.xpath(locator1));
+        System.out.println(element1.getText());
+        BrowserUtils.waitFor(2);
+        element1.click();
 
+        WebElement element2;
+        String locator2 = "//div[starts-with(@id,'react-select-4-option-')][text()='" + cityName + "']";
+        BrowserUtils.scrollToElement(new PracticeFormPage().city);
+        new PracticeFormPage().city.click();
+        System.out.println(new PracticeFormPage().stateMenu.getAttribute("outerHTML"));
+        element2 = Driver.get().findElement(By.xpath(locator2));
+        System.out.println(element2.getText());
+        BrowserUtils.waitFor(2);
+        element2.click();
     }
-
     @Then("The student should be able to submit")
     public void the_student_should_be_able_to_submit() {
-
         new PracticeFormPage().submit.click();
+        BrowserUtils.waitFor(3);
     }
-
     @Then("message Thanks for submitting the form should be displayed on new popup")
     public void message_Thanks_for_submitting_the_form_should_be_displayed_on_new_popup() {
 
-        Assert.assertTrue(new PracticeFormPage().allert.getText().equals("Thanks for submitting the form"));
-
+        Assert.assertEquals("Thanks for submitting the form", new PracticeFormPage().alert.getText());
         new PracticeFormPage().closeLargeModal.click();
-
     }
     @Then("The student should be able to submit after cleaning one mandatory info")
     public void the_student_should_be_able_to_submit_after_cleaning_one_mandatory_info() {
 
-        new PracticeFormPage().userNumber.clear();
-
         BrowserUtils.waitFor(3);
-
+        new PracticeFormPage().userEmail.clear();
         new PracticeFormPage().submit.click();
+        BrowserUtils.waitFor(3);
     }
-
     @Then("Message will not be displayed if mandatory fields have not been entered correctly")
     public void message_will_not_be_displayed_if_mandatory_fields_have_not_been_entered_correctly() {
 
-       // Assert.assertTrue(!driver.findElement(By.className("table-responsive")).isEnabled());
-
+        Assert.assertFalse(new PracticeFormPage().alert.isEnabled());
     }
-
 }
