@@ -38,7 +38,7 @@ IntelliJ Gherkin Plugin
 
 Test RUN
 
-Note: To run the scenarios, use @build tag for all feature test 
+Note: To run the scenarios, use @wip tag for all feature test 
 
 in the CukesRunner class/Cucumber Options.
 
@@ -59,7 +59,7 @@ Run from command line invoke mvn clean verify
 
 Test Reports Locations
 
-1- Cucumber HTML Plugin Reports target -> cucumber-html-reports > overview-steps.html (Right Click and Open in any Browser )
+1- Cucumber HTML Plugin Reports target -> cucumber-html-reports > overview-features.html (Right Click and Open in any Browser )
 
 2- When you run my project, Cucumber will create automatically online report link. You can click the link with in the 24 hours and check the all test steps and status.
 
