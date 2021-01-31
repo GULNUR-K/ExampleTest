@@ -68,7 +68,7 @@ public class PracticeFormStepDef {
 
         String projectPath = System.getProperty("user.dir");
 
-        String filePath = "src/test/resources/picture.png";
+        String filePath = "src/test/resources/KIRCAER GULNUR.jpg";
 
         String fullPath = projectPath + "/" + filePath;
 

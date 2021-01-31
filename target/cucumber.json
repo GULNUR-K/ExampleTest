@@ -1,0 +1,412 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 913406000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the student is on the practice form page",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_is_on_the_practice_form_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1165650000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the student should be able to enter all details into inboxes using following information",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "First Name",
+                  "Student"
+                ]
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "Example"
+                ]
+              },
+              {
+                "cells": [
+                  "Email",
+                  "studentExample@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "Mobile",
+                  "08976453421"
+                ]
+              },
+              {
+                "cells": [
+                  "Date of Birth",
+                  "12 Feb 1986"
+                ]
+              },
+              {
+                "cells": [
+                  "Subjects",
+                  "History"
+                ]
+              },
+              {
+                "cells": [
+                  "Current Address",
+                  "18 October Road"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 150800000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the student should be able to select gender \"Male\" and hobbies \"Reading\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Male\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"Reading\"",
+                  "offset": 63
+                }
+              ],
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_should_be_able_to_select_gender_and_hobbies(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2065072000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The student should able to upload a picture",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_should_able_to_upload_a_picture()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4307737000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "select state \"NCR\" and city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NCR\"",
+                  "offset": 13
+                },
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.select_state_and_city(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T01:36:47.577Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2411973000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.demoqa.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Validation for correct entering(Positive)",
+        "description": "",
+        "id": "student-should-be-able-to-enter-all-details-into-student-registration-form-and-submit;validation-for-correct-entering(positive)",
+        "after": [
+          {
+            "result": {
+              "duration": 91174000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.demoqa.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3125539000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The student should be able to submit",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_should_be_able_to_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 86475000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "message Thanks for submitting the form should be displayed on new popup",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.message_Thanks_for_submitting_the_form_should_be_displayed_on_new_popup()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wipi"
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 902475000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the student is on the practice form page",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_is_on_the_practice_form_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 983524000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the student should be able to enter all details into inboxes using following information",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_should_be_able_to_enter_all_details_into_inboxes_using_following_information(java.util.Map\u003cjava.lang.String, java.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "First Name",
+                  "Student"
+                ]
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "Example"
+                ]
+              },
+              {
+                "cells": [
+                  "Email",
+                  "studentExample@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "Mobile",
+                  "08976453421"
+                ]
+              },
+              {
+                "cells": [
+                  "Date of Birth",
+                  "12 Feb 1986"
+                ]
+              },
+              {
+                "cells": [
+                  "Subjects",
+                  "History"
+                ]
+              },
+              {
+                "cells": [
+                  "Current Address",
+                  "18 October Road"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 152121000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the student should be able to select gender \"Male\" and hobbies \"Reading\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Male\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"Reading\"",
+                  "offset": 63
+                }
+              ],
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_should_be_able_to_select_gender_and_hobbies(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2057019000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The student should able to upload a picture",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_should_able_to_upload_a_picture()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4286425000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "select state \"NCR\" and city \"Delhi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NCR\"",
+                  "offset": 13
+                },
+                {
+                  "val": "\"Delhi\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.select_state_and_city(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T01:37:02.094Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1248797000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.demoqa.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Validation for correct entering(Negative)",
+        "description": "",
+        "id": "student-should-be-able-to-enter-all-details-into-student-registration-form-and-submit;validation-for-correct-entering(negative)",
+        "after": [
+          {
+            "result": {
+              "duration": 98748000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.demoqa.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3048634000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The student should be able to clear one mandatory info",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.the_student_should_be_able_to_clear_one_mandatory_info()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3059325000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The student should be able to see red color for missing info",
+            "match": {
+              "location": "com.demoqa.step_definitions.PracticeFormStepDef.The_student_should_be_able_to_see_red_color_for_missing_info()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wipi"
+          }
+        ]
+      }
+    ],
+    "name": "Student should be able to enter all details into student registration form and submit",
+    "description": "",
+    "id": "student-should-be-able-to-enter-all-details-into-student-registration-form-and-submit",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/PracticeForm.feature",
+    "tags": [
+      {
+        "name": "@wipi",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
