@@ -1,5 +1,5 @@
 
-@wip
+@build
 Feature: Use the date picker to set the date to 1 month in the future
 
  # Must select a date using date picker from 'Select Date' field
@@ -8,4 +8,4 @@ Feature: Use the date picker to set the date to 1 month in the future
   Scenario: User can Drag and drop element
     Given the user is on the Date Picker page
     Then  the user should be able to select a date using date picker from Select Date field
-    And   the user should be able to select a month from today's date
+    And   the user should be able to select a date from today's date
