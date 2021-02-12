@@ -1,5 +1,5 @@
 
-@wip1
+@wip
 Feature: Student should be able to enter all details into student registration form and submit
 #  All mandatory details must be entered
 #  A picture must be uploaded
