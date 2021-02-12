@@ -30,6 +30,7 @@ public class AlertStepDef {
         BrowserUtils.waitFor(5);
         Alert alert = Driver.get().switchTo().alert();
         Assert.assertEquals("This alert appeared after 5 seconds", alert.getText());
+        BrowserUtils.waitFor(3);
         alert.accept();
         BrowserUtils.waitFor(3);
     }

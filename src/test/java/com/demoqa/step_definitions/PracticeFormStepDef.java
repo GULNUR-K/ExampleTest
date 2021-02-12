@@ -7,15 +7,12 @@ import com.demoqa.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.Map;
 
 public class PracticeFormStepDef {
-    WebDriver driver;
 
     @Given("the student is on the practice form page")
     public void the_student_is_on_the_practice_form_page() {

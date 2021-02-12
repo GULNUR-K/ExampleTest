@@ -87,7 +87,44 @@ public class DatePickerStepDef {
         dropdownMonth.click();
         dropdownYear.click();
         BrowserUtils.waitFor(1);
-        if(day>=25 && day<31 && !(month==2)) {
+        boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
+        if(!isLeapYear) {
+            if (day >= 25 && day < 31 && !(month == 2)) {
+                try {
+                    WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
+                    dropdownDay.click();
+                } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+                    WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
+                    dropdownDay.click();
+                }
+            } else if (day < 25) {
+                try {
+                    WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[1]"));
+                    dropdownDay.click();
+                } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+                    WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[1]"));
+                    dropdownDay.click();
+                }
+            } else if (day == 31 && !(month == 2)) {
+                try {
+                    WebElement dropdownDay = Driver.get().findElement(By.xpath("//div[@class='react-datepicker__week']/div[text()='" + day + "']"));
+                    dropdownDay.click();
+                } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+                    WebElement dropdownDay = Driver.get().findElement(By.xpath("//div[@class='react-datepicker__week']/div[text()='" + day + "']"));
+                    dropdownDay.click();
+                }
+            } else if (day >= 29 && month == 2) {
+                day=28;
+                try {
+                    WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
+                    dropdownDay.click();
+                } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+                    WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
+                    dropdownDay.click();
+                }
+            }
+        }else if(isLeapYear){
+          if (day >= 25 && day < 31 && !(month == 2)) {
             try {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
                 dropdownDay.click();
@@ -95,7 +132,7 @@ public class DatePickerStepDef {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
                 dropdownDay.click();
             }
-        }else if(day<25){
+        } else if (day < 25) {
             try {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[1]"));
                 dropdownDay.click();
@@ -103,7 +140,7 @@ public class DatePickerStepDef {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[1]"));
                 dropdownDay.click();
             }
-        }else if(day==31 && !(month==2)) {
+        } else if (day == 31 && !(month == 2)) {
             try {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("//div[@class='react-datepicker__week']/div[text()='" + day + "']"));
                 dropdownDay.click();
@@ -111,8 +148,8 @@ public class DatePickerStepDef {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("//div[@class='react-datepicker__week']/div[text()='" + day + "']"));
                 dropdownDay.click();
             }
-        }else if(day>=29 && month==2){
-            day=28;
+        } else if (day >= 30 && month == 2) {
+            day = 29;
             try {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
                 dropdownDay.click();
@@ -120,8 +157,8 @@ public class DatePickerStepDef {
                 WebElement dropdownDay = Driver.get().findElement(By.xpath("(//div[@class='react-datepicker__week']/div[text()='" + day + "'])[2]"));
                 dropdownDay.click();
             }
-        }
-        // I did not count leap years.may be later :)
+        }}
+
         BrowserUtils.waitFor(4);
         String date3 = new DatePickerPage().datePickerMonthYearInput.getAttribute("value");
         System.out.println("date3 = " + date3);

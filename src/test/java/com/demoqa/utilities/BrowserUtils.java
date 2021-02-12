@@ -1,15 +1,8 @@
 package com.demoqa.utilities;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class BrowserUtils {
 
@@ -25,6 +18,11 @@ public class BrowserUtils {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void dragAndDrop(WebElement element1,WebElement element2) {
+        Actions actions = new Actions(Driver.get());
+        actions.dragAndDrop(element1,element2).perform();
     }
 
     public static void scrollToElement(WebElement element) {

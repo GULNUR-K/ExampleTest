@@ -23,13 +23,15 @@ public class DroppableStepDef {
     }
     @Then("the user should be able to drag and drop the Drag me element into the specified area")
     public void the_user_should_be_able_to_drag_and_drop_the_element_into_the_specified_area() {
-        Actions actions = new Actions(Driver.get());
+        //Actions actions = new Actions(Driver.get());
 
         WebElement source = new DroppablePage().draggable;
         WebElement target = new DroppablePage().droppable;
 
         BrowserUtils.waitFor(2);
-        actions.dragAndDrop(source,target).perform();
+        BrowserUtils.dragAndDrop(source,target);
+
+        //actions.dragAndDrop(source,target).perform();
         BrowserUtils.waitFor(2);
 
         Assert.assertTrue(Driver.get().findElement(By.xpath("(//div[@id='droppable']/p)[1]")).isDisplayed());

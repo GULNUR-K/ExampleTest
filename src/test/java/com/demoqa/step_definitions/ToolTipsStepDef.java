@@ -10,7 +10,6 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 public class ToolTipsStepDef {
 
@@ -42,5 +41,4 @@ public class ToolTipsStepDef {
         WebElement element=Driver.get().findElement(By.xpath("//div/div[.='You hovered over the text field']"));
         Assert.assertEquals("You hovered over the text field", element.getText());
     }
-
 }
