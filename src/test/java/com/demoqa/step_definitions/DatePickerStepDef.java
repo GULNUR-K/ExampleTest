@@ -71,7 +71,7 @@ public class DatePickerStepDef {
         int month=Integer.parseInt(date2[0]);
         int day=Integer.parseInt(date2[1]);
         int year=Integer.parseInt(date2[2]);
-        System.out.println("month = " + month);
+        //System.out.println("month = " + month);
         if(month==1){
             month=11;
             year=year-1;
