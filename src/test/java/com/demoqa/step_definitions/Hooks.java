@@ -6,9 +6,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
 import java.util.concurrent.TimeUnit;
-
 
     public class Hooks {
 
@@ -18,7 +16,6 @@ import java.util.concurrent.TimeUnit;
             Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             Driver.get().manage().window().maximize();
         }
-
         @After
         public void tearDown(Scenario scenario){
             System.out.println("\tthis is coming from AFTER");
@@ -28,6 +25,5 @@ import java.util.concurrent.TimeUnit;
             }
             Driver.closeDriver();
         }
-
     }
 

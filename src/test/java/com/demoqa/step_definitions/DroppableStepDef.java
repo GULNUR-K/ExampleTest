@@ -35,5 +35,6 @@ public class DroppableStepDef {
         BrowserUtils.waitFor(2);
 
         Assert.assertTrue(Driver.get().findElement(By.xpath("(//div[@id='droppable']/p)[1]")).isDisplayed());
+
     }
 }
