@@ -21,7 +21,6 @@ public class AlertStepDef {
     }
     @Given("the user should be able to click second button")
     public void the_user_should_be_able_to_click_second_button() {
-
         new AlertPage().timerAlertButton.click();
     }
     @Then("the user accept the alert")
