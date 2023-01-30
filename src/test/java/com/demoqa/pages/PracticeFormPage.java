@@ -70,5 +70,4 @@ public class PracticeFormPage {
 
     @FindBy(id="closeLargeModal")
     public WebElement closeLargeModal;
-
 }

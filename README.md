@@ -66,6 +66,6 @@ Test Reports Locations
 
 2021 January; 
 
-https://github.com/GULNUR-K/AdvancedTechTest
+https://github.com/GULNUR-K/ExampleTest
 
 End
